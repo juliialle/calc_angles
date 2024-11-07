@@ -3,11 +3,9 @@ from Bio.PDB.PDBList import PDBList
 from Bio.PDB.vectors import Vector
 import matplotlib.pyplot as plt
 
-#pdbl = PDBList()
-#fetch_pdb = pdbl.retrieve_pdb_file('4ywo', file_format='pdb')
-#path = input("Path of PDB file:")
-
-path = "/Users/julialemanska/Desktop/studia/bio strukturalna/lab3/yw/pdb4ywo.ent"
+pdbl = PDBList()
+fetch_pdb = pdbl.retrieve_pdb_file('4ywo', file_format='pdb')
+path = input("Path of PDB file:")
 
 pdb_parser = PDB.PDBParser()
 structure = pdb_parser.get_structure("4ywo", path)
